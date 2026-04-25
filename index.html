@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manojkumar N | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ===== FLOATING BACKGROUND ===== */
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #38bdf8, #6366f1);
+    animation: float 12s infinite ease-in-out;
+    opacity: 0.2;
+}
+
+.circle:nth-child(1) { width: 300px; height: 300px; top: 10%; left: 10%; }
+.circle:nth-child(2) { width: 200px; height: 200px; top: 60%; left: 70%; }
+.circle:nth-child(3) { width: 150px; height: 150px; top: 30%; left: 80%; }
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.05);
+}
+
+nav h2 {
+    color: #38bdf8;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 55px;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+/* typing effect */
+.typing {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #38bdf8;
+    width: 0;
+    animation: typing 3s steps(30,end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.hero p {
+    margin-top: 15px;
+    color: #94a3b8;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #38bdf8, #6366f1);
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* SECTION */
+section {
+    padding: 80px;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #38bdf8;
+    color: black;
+}
+
+/* PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: linear-gradient(45deg,#38bdf8,#6366f1);
+}
+
+.card a {
+    color: white;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* CONTACT */
+.contact a {
+    display: block;
+    margin-bottom: 10px;
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+/* FADE IN ANIMATION */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s forwards;
+}
+
+.fade:nth-child(2){animation-delay:0.2s;}
+.fade:nth-child(3){animation-delay:0.4s;}
+.fade:nth-child(4){animation-delay:0.6s;}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
+
+<nav>
+    <h2>MK</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div>
+        <h1 class="typing">Hi, I'm <span>Manojkumar</span></h1>
+        <p>Aspiring Software Engineer | Building Real-World Applications</p>
+        <a href="#projects" class="btn">Explore My Work</a>
+    </div>
+</div>
+
+<section id="about">
+    <h2 class="section-title fade">About Me</h2>
+    <p class="fade">
+        <p>
+I am an aspiring software engineer driven by a strong desire to break limits and achieve excellence in the tech industry. 
+<br>Coming from an Electrical Engineering background, I actively built my path into software development through consistent learning and hands-on projects.
+    <br>    
+I focus on problem-solving, writing efficient code, and continuously upgrading my skills in C, Java, and web development. <br>
+I am not just learning — I am building, improving, and preparing to compete at the highest level.
+
+My vision is to become a high-impact software engineer and create solutions that make a real difference.
+</p>
+    </p>
+</section>
+
+<section>
+    <h2 class="section-title fade">Skills</h2>
+    <div class="skills">
+        <div class="skill fade">C</div>
+        <div class="skill fade">Java</div>
+        <div class="skill fade">HTML</div>
+        <div class="skill fade">CSS</div>
+        <div class="skill fade">VS Code</div>
+        <div class="skill fade">Eclipse</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="section-title fade">Projects</h2>
+
+    <div class="projects">
+
+        <div class="card fade">
+            <h3>E-Library System</h3>
+            <p>Built a menu-driven library management system using C with search and data handling features.</p>
+            <a href="https://github.com/manojkumarnagaraj1986-creator/E-Library-C/blob/main/E-Library.c">View Project</a>
+        </div>
+
+        <div class="card fade">
+            <h3>Student Management</h3>
+            <p>Java OOP-based system to manage student data efficiently.</p>
+            <a href="https://github.com/manojkumarnagaraj1986-creator/Student-Management-Java/blob/main/StudentManagementSystem.java">View Project</a>
+        </div>
+
+        <div class="card fade">
+            <h3>Portfolio Website</h3>
+            <p>Responsive portfolio using HTML & CSS.</p>
+            <a href="https://github.com/manojkumarnagaraj1986-creator/manojkumarN.github.io">View Project</a>
+        </div>
+
+    </div>
+    <center>
+    <section>
+    <h2 class="section-title">Let's Work Together</h2>
+    <p>I am actively looking for opportunities to apply my skills and grow as a software engineer.</p>
+    <a href="mailto:manojkumarnagaraj1986@gmail.com" class="btn">Hire Me</a>
+</section>
+</center>
+</section>
+
+<section id="contact">
+    <h2 class="section-title fade">Contact</h2>
+    <div class="contact fade">
+        <a href="mailto:manojkumarnagaraj1986@gmail.com">Email : manojkumarnagaraj1986@gmail.com</a>
+        <a href="https://www.linkedin.com/in/manoj-kumar77/">LinkedIn : www.linkedin.com/in/manoj-kumar77</a>
+        <a href="https://github.com/manojkumarnagaraj1986-creator">GitHub : github.com/manojkumarnagaraj1986-creator</a>
+        <p>Phone: +91 6369068353</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Manojkumar N</p>
+</footer>
+
+</body>
+</html>
